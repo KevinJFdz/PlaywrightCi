@@ -39,6 +39,9 @@ jobs:
         run: mvn -B install -D skipTests --no-transfer-progress
       - name: Install Playwright
         run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
+      - name: Copy needed files
+        run: |
+         mkdir -p allure-results
       - name: Run tests
         run: mvn test
 
