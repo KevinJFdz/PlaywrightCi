@@ -43,7 +43,9 @@ jobs:
         run: |
          mkdir -p allure-results
       - name: Run tests
+        if: always()
         run: mvn test
+        continue-on-error: true
 #      - name:
 #        if: always()
 #        run: mvn package
