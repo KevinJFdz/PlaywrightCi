@@ -1,1 +1,0 @@
-{"6510909851959c88d51135618526b27b":{"statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1},"items":[{"uid":"cd3a0cc5d4e190be","reportUrl":"https://KevinJFdz.github.io/PlaywrightCi/15//#testresult/cd3a0cc5d4e190be","status":"passed","time":{"start":1675580351659,"stop":1675580368477,"duration":16818}}]}}
