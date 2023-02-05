@@ -3,6 +3,7 @@ package steps.login;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.Assert;
 import pages.dashboard.DashboardPage;
 import pages.login.LoginPage;
 import pages.orange.LoginOrangePage;
@@ -32,6 +33,12 @@ public class LoginSteps {
         loginOrangePage.goToOrangeLogin();
         CucumberManager.attachScreenshotToReport(loginOrangePage.takeScreenshot());
         loginOrangePage.closOrangeTab();
+        CucumberManager.attachScreenshotToReport(loginOrangePage.takeScreenshot());
+    }
+
+    @Then("the app should not display de dashboard section")
+    public void theAppShouldNotDisplayDeDashboardSection() {
+        Assert.fail("Fallo");
         CucumberManager.attachScreenshotToReport(loginOrangePage.takeScreenshot());
     }
 }
