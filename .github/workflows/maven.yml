@@ -71,7 +71,8 @@ jobs:
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history/allure-history
+          PUBLISH_DIR: allure-results
+#          PUBLISH_DIR: allure-history/allure-history
 
 #      - name: Generate Allure Report
 #        uses: simple-elf/allure-report-action@master
