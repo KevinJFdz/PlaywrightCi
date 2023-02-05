@@ -42,18 +42,12 @@ jobs:
       - name: Run tests
         run: mvn test
 
-#      - name: Generate Allure Report
-#        uses: simple-elf/allure-report-action@master
-#        if: always()
-#        with:
-#          allure_results: allure-results
-#          gh_pages: allure
-      - name: Publish Allure report
-        uses: allure-actions/allure@v2
+      - name: Generate Allure Report
+        uses: simple-elf/allure-report-action@master
+        if: always()
         with:
-          version: 2.13.5
-          command: report
-          arguments: '--path allure-results'
+          allure_results: allure-results
+          gh_pages: allure
 
 #      - name: Deploy report to Github Pages
 #        if: always()
@@ -66,6 +60,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.DEPLOY_KEY }}
-          publish_dir: ./allure-report
+          publish_dir: allure-results
       
       
